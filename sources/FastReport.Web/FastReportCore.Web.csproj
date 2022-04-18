@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <Configurations>Debug;Release;Academic;Basic;Demo;WinForms</Configurations>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;DOTNET_4;FRCORE</DefineConstants>
+    <DocumentationFile>bin\Release\net47\FastReportCore.Web.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinForms|AnyCPU'">
+    <DefineConstants>TRACE;DOTNET_4;FRCORE</DefineConstants>
+    <DocumentationFile>bin\Release\net47\FastReportCore.Web.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Demo|AnyCPU'">
+    <DefineConstants>TRACE;DOTNET_4;FRCORE</DefineConstants>
+    <DocumentationFile>bin\Release\net47\FastReportCore.Web.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Academic|AnyCPU'">
+    <DefineConstants>TRACE;DOTNET_4;FRCORE</DefineConstants>
+    <DocumentationFile>bin\Release\net47\FastReportCore.Web.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;DOTNET_4;FRCORE;</DefineConstants>
+    <DocumentationFile>bin\Debug\net47\FastReportCore.Web.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.vs2005.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FastReport.Core\FastReportCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+</Project>

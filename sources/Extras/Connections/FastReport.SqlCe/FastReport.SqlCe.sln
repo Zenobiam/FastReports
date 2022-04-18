@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastReport.SqlCe", "FastReport.SqlCe.csproj", "{D81E5E48-0A8A-43EE-AEF9-8EEC62AAC956}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D81E5E48-0A8A-43EE-AEF9-8EEC62AAC956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81E5E48-0A8A-43EE-AEF9-8EEC62AAC956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81E5E48-0A8A-43EE-AEF9-8EEC62AAC956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81E5E48-0A8A-43EE-AEF9-8EEC62AAC956}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50F61E71-2ACE-4DF5-A4D3-AFE5CBA9C5B6}
+	EndGlobalSection
+EndGlobal

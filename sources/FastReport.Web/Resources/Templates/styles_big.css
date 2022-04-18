@@ -1,0 +1,311 @@
+.frreport {
+border:/*main-border-width*/0px solid /*main-border-color*/black;
+display:-moz-inline-stack;
+display:inline-block;
+zoom:1;
+background-color:/*main-background-color*/white;
+color:/*main-text-color*/black;
+font-family:Geneva, Arial, Helvetica, sans-serif;
+font-style:normal;
+font-weight:normal;
+font-size:/*main-font-size*/12px;
+}
+
+.frreport .frtoolbar input {
+-webkit-appearance:none;
+padding:0;
+margin:0;
+}
+
+.frreport .frtoolbar input[type="text"] 
+{
+	width:auto;
+}
+
+.frreport .frtoolbar 
+{
+_border-bottom:/*toolbar-border-width*/1px solid /*toolbar-border-color*/black;
+vertical-align:middle;
+color:/*toolbar-text-color*/black;
+background:/*toolbar-background-color*/#ebebeb /*toolbar-background-url*/url(/Web/Toolbar/ToolbarBackground.gif) center repeat-x;
+height:/*toolbar-height*/50px;
+width:100%;
+}
+.frreport .frtoolbar .space {
+visibility:hidden;
+width:100%;
+height:10px; 
+float:left;
+}
+.frreport .frtoolbar .input {
+border:0;
+background:/*toolbar-input-background-color*/#f8f8f8;
+font-size:/*toolbar-font-size*/14px;
+padding-top:7px;
+padding-bottom:7px;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px; 
+-khtml-border-radius:4px;
+}
+.frreport .frtoolbar .delim {
+padding:9px 5px 9px 5px!important;
+}
+.frreport .frtoolbar .input:hover {
+background:/*toolbar-input-selected-background-color*/#fff;
+}
+.frreport .frtoolbar .center {
+text-align:center;
+}
+.frreport .frtoolbar .left {
+text-align:left;
+}
+.frreport .frtoolbar .tr, .frreport .frtoolbar .td {  
+position:relative;
+float:left;
+}
+.frreport .frtoolbar .td {
+text-align:center;
+}
+.frreport .frtoolbar img {
+border:0;
+}
+.frreport .divider {
+width:10px;
+}
+.frreport .nav {
+width:32px;
+cursor:pointer;
+border:none; 
+}
+.frreport .round {
+box-shadow:2px 2px 5px #777;
+-webkit-box-shadow:2px 2px 5px #777;
+-moz-box-shadow:2px 2px 5px #777;
+}
+.frreport .frbody {
+display: inline-block;
+overflow: auto;
+width: 100%;
+height: /*body-height*/100%;
+}
+.frreport .frbody .frcontainer {
+display: inline-block;
+overflow: hidden;
+}
+.frreport .frtoolbar ul {
+list-style:none; 
+margin:0; 
+padding:0;
+}
+.frreport .radio {
+list-style:none;
+}
+.frreport .frtoolbar li ul {
+position:absolute; 
+visibility:hidden;
+opacity:0;
+filter:alpha(opacity=0);
+padding:0;
+text-align:left;
+white-space:nowrap;
+border:/*menu-border-width*/1px solid /*menu-border-color*/#888;
+background-color:/*menu-background-color*/#f0f0f0;
+z-index:100;
+-webkit-transition:200ms ease;
+-moz-transition:200ms ease;
+-o-transition:200ms ease;
+transition:200ms ease;
+}
+.frreport .menuitem {
+text-align:left;
+}
+.frreport .radioitem {
+text-align:left;
+}
+.frreport .checked {
+background:/*toolbar-checkbox-url*/url("/Web/Toolbar/Checkbox.gif") no-repeat 8px 60%;
+}
+.frreport .menutext {
+padding:0.4em 1em 0.4em 1em!important; 
+color:/*menu-text-color*/#444; 
+cursor:pointer;
+font-size:/*toolbar-font-size*/12px;
+font-weight:normal;
+border:none;
+text-align:left;
+width:240px; 
+background-color:/*menu-background-color*/#f0f0f0;
+}
+.frreport .padleft {
+padding-left:2em!important; 
+}
+.frreport .frtoolbar li .menutext:hover {
+color:/*menu-selected-text-color*/#fff; 
+background-color:/*menu-selected-background-color*/#bbbbbb; 
+}
+.frreport .frtoolbar ul > li:hover ul { 
+visibility:visible;
+opacity:1;
+filter:alpha(opacity=100);
+}
+
+.frreport .export_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Export.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:-128px 0;
+}
+.frreport .print_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Print.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:-160px 0;
+}
+.frreport .zoom_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Zoom.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:-256px 0;
+}
+.frreport .settings_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Settings.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:-288px 0;
+}
+.frreport .refresh_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Refresh.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:-192px 0;
+}
+.frreport .first_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/First.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:-32px 0;
+}
+.frreport .prev_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Prev.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:0px 0;
+}
+.frreport .next_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Next.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:-64px 0;
+}
+.frreport .last_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Last.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:-96px 0;
+}
+.frreport .search_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Search.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:-224px 0;
+}
+.frreport .back_button {
+background:/*toolbar-image-url*/url("/Web/Toolbar/Prev.gif") no-repeat;
+width:32px;
+height:32px;
+background-position:0px 0;
+}
+
+.frreport .export_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Export.gif") no-repeat;
+background-position:-128px 0;
+}
+.frreport .print_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Print.gif") no-repeat;
+background-position:-160px 0;
+}
+.frreport .zoom_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Zoom.gif") no-repeat;
+background-position:-256px 0;
+}
+.frreport .settings_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Settings.gif") no-repeat;
+background-position:-288px 0;
+}
+.frreport .refresh_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Refresh.gif") no-repeat;
+background-position:-192px 0;
+}
+.frreport .first_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/First.gif") no-repeat;
+background-position:-32px 0;
+}
+.frreport .prev_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Prev.gif") no-repeat;
+background-position:0px 0;
+}
+.frreport .next_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Next.gif") no-repeat;
+background-position:-64px 0;
+}
+.frreport .last_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Last.gif") no-repeat;
+background-position:-96px 0;
+}
+.frreport .search_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Search.gif") no-repeat;
+background-position:-224px 0;
+}
+.frreport .back_button:disabled {
+background:/*toolbar-image-disabled-url*/url("/Web/Toolbar/Prev.gif") no-repeat;
+background-position:0px 0;
+}
+
+.frreport .tab
+{
+padding:0.2em 1em 0.2em 1em!important;
+margin: 0.4em 0em 0.2em 0.3em!important;
+color:/*menu-text-color*/#444; 
+border:/*menu-border-width*/1px solid /*menu-border-color*/#888;
+background-color:/*menu-background-color*/#f0f0f0;
+font-size: 12px;
+font-style:normal;
+font-weight:normal;
+}
+
+.frreport .tabselector{float:left;}
+.frreport .tabclose{width:16px; padding:0.2em 0 0.2em 0!important;text-align:center;margin:0.4em 0 0.2em -0.4em!important;color:#444; border-width:1px 1px 1px 0px; border-style:solid; border-color:#888;background-color:#f0f0f0;font-size: 12px;font-style:normal;font-weight:normal;}
+
+.frreport .tabselected, .frreport .tab:hover
+{
+color:/*menu-selected-text-color*/#fff; 
+background-color:/*menu-selected-background-color*/#bbbbbb; 
+}
+
+.gutter {
+background-color: #eee;
+background-repeat: no-repeat;
+background-position: 50%;
+}
+.gutter.gutter-horizontal {
+background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+cursor: ew-resize;
+}
+.froutline, .frbody {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.froutline {
+overflow: auto;
+height: /*body-height*/100%;
+/*direction: rtl;*/
+}
+.froutlinecontainer {
+/*direction: ltr;*/
+/*display: inline-block;*/
+}
+.froutline, .frbody, .gutter.gutter-horizontal {
+float: left;
+}

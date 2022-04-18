@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current">
+  <PropertyGroup>
+    <FastReportBaseDir>..\FastReport.Base</FastReportBaseDir>
+    <FastReportBaseIncludePattern>$(FastReportBaseDir)\**\*.cs</FastReportBaseIncludePattern>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ProjectGuid>{8F614F64-B39C-478A-96FA-ED12570966D1}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(FastReportBaseIncludePattern)">
+      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Barcode\Aztec\" />
+    <Folder Include="Barcode\QRCode\" />
+    <Folder Include="Code\" />
+    <Folder Include="CrossView\" />
+    <Folder Include="Data\JsonConnection\JsonParser\" />
+    <Folder Include="Engine\" />
+    <Folder Include="Export\Html\" />
+    <Folder Include="Export\Image\" />
+    <Folder Include="Format\" />
+    <Folder Include="Functions\" />
+    <Folder Include="Gauge\Linear\" />
+    <Folder Include="Gauge\Radial\" />
+    <Folder Include="Gauge\Simple\Progress\" />
+    <Folder Include="Import\DevExpress\" />
+    <Folder Include="Import\ListAndLabel\" />
+    <Folder Include="Import\RDL\" />
+    <Folder Include="Matrix\" />
+    <Folder Include="Preview\" />
+    <Folder Include="Table\" />
+    <Folder Include="TypeConverters\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+</Project>

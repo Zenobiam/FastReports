@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current">
+  <PropertyGroup>
+    <FastReportBaseExtDir>..\FastReport.BaseExt</FastReportBaseExtDir>
+    <FastReportBaseExtIncludePattern>$(FastReportBaseExtDir)\**\*.cs</FastReportBaseExtIncludePattern>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ProjectGuid>{2B5C5B90-65CE-4019-84AD-81E926759C34}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(FastReportBaseExtIncludePattern)">
+      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Barcode\" />
+    <Folder Include="Dialog\" />
+    <Folder Include="Engine\" />
+    <Folder Include="Export\Biff8\" />
+    <Folder Include="Export\Csv\" />
+    <Folder Include="Export\Dbf\" />
+    <Folder Include="Export\Dxf\Groups\" />
+    <Folder Include="Export\Dxf\Sections\Entities\" />
+    <Folder Include="Export\Dxf\Sections\Tables\" />
+    <Folder Include="Export\Dxf\Utils\" />
+    <Folder Include="Export\Email\" />
+    <Folder Include="Export\Hpgl\Commands\" />
+    <Folder Include="Export\Hpgl\Utils\" />
+    <Folder Include="Export\Html\" />
+    <Folder Include="Export\Json\" />
+    <Folder Include="Export\LaTeX\" />
+    <Folder Include="Export\Odf\" />
+    <Folder Include="Export\OoXML\Docx\" />
+    <Folder Include="Export\OoXML\Pptx\" />
+    <Folder Include="Export\OoXML\Xlsx\" />
+    <Folder Include="Export\OoXML\Xps\" />
+    <Folder Include="Export\Pdf\" />
+    <Folder Include="Export\Ppml\" />
+    <Folder Include="Export\PS\" />
+    <Folder Include="Export\Richtext\" />
+    <Folder Include="Export\Svg\" />
+    <Folder Include="Export\Text\" />
+    <Folder Include="Export\Xaml\" />
+    <Folder Include="Export\Xml\" />
+    <Folder Include="Export\Zpl\" />
+    <Folder Include="Fonts\LinqExts\" />
+    <Folder Include="Import\DevExpress\" />
+    <Folder Include="Import\RDL\" />
+    <Folder Include="Map\Import\Osm\" />
+    <Folder Include="Map\Import\Shp\" />
+    <Folder Include="MSChart\" />
+    <Folder Include="Preview\" />
+    <Folder Include="RichText\" />
+    <Folder Include="SVG\Source\Basic Shapes\" />
+    <Folder Include="SVG\Source\Clipping and Masking\" />
+    <Folder Include="SVG\Source\Css\" />
+    <Folder Include="SVG\Source\DataTypes\" />
+    <Folder Include="SVG\Source\Document Structure\" />
+    <Folder Include="SVG\Source\Exceptions\" />
+    <Folder Include="SVG\Source\Extensibility\" />
+    <Folder Include="SVG\Source\ExtensionMethods\" />
+    <Folder Include="SVG\Source\External\ExCSS\Model\Extensions\" />
+    <Folder Include="SVG\Source\External\ExCSS\Model\Rules\" />
+    <Folder Include="SVG\Source\External\ExCSS\Model\Selector\" />
+    <Folder Include="SVG\Source\External\ExCSS\Model\TextBlocks\" />
+    <Folder Include="SVG\Source\External\ExCSS\Model\Values\" />
+    <Folder Include="SVG\Source\External\Fizzler\" />
+    <Folder Include="SVG\Source\Filter Effects\feColourMatrix\" />
+    <Folder Include="SVG\Source\Filter Effects\feGaussianBlur\" />
+    <Folder Include="SVG\Source\Filter Effects\feMerge\" />
+    <Folder Include="SVG\Source\Filter Effects\feOffset\" />
+    <Folder Include="SVG\Source\Painting\" />
+    <Folder Include="SVG\Source\Paths\" />
+    <Folder Include="SVG\Source\Rendering\" />
+    <Folder Include="SVG\Source\Text\" />
+    <Folder Include="SVG\Source\Transforms\" />
+    <Folder Include="SVG\Source\Web\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+</Project>

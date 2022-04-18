@@ -1,0 +1,48 @@
+To use Active Query Builder instead of standard query builder embedded in FastReport.Net:
+
+1. Download and install the latest version of Active Query Builder .Net edition:
+http://www.activequerybuilder.com/
+
+2. Add references to Active Query Builder assemblies in your project. To do this:
+  - expand the "References" item in the Solution Explorer;
+  - right-click the "References" item and choose the "Add Reference..." item;
+  - add references to the following assemblies:
+•	ActiveQueryBuilder.AdvantageMetadataProvider;
+•	ActiveQueryBuilder.Core;
+•	ActiveQueryBuilder.DB2MetadataProvider;
+•	ActiveQueryBuilder.FirebirdMetadataProvider;
+•	ActiveQueryBuilder.MSSQLCEMetadataProvider;
+•	ActiveQueryBuilder.InformixMetadataProvider;
+•	ActiveQueryBuilder.MSSQLMetadataProvider;
+•	ActiveQueryBuilder.MySQLMetadataProvider;
+•	ActiveQueryBuilder.ODBCMetadataProvider;
+•	ActiveQueryBuilder.OLEDBMetadataProvider;
+•	ActiveQueryBuilder.OracleMetadataProvider;
+•	ActiveQueryBuilder.OracleNativeMetadataProvider;
+•	ActiveQueryBuilder.PostgreSQLMetadataProvider;
+•	ActiveQueryBuilder.SQLiteMetadataProvider;
+•	ActiveQueryBuilder.SybaseMetadataProvider;
+•	ActiveQueryBuilder.UniversalMetadataProvider;
+•	ActiveQueryBuilder.View;
+•	ActiveQueryBuilder.View.WinForms;
+•	ActiveQueryBuilder.View.WPF;
+•	ActiveQueryBuilder.VistaDB5MetadataProvider.
+3. Include ActiveQBForm file in your project. To do this:
+  - right-click your project item in the Solution Explorer and choose the "Add|Existing Item..." item;
+  - in the "Open file" dialog, choose the "ActiveQBForm.cs" file;
+4. Add the following code in your project to replace the query builder:
+
+using FastReport.Utils;
+
+Config.DesignerSettings.CustomQueryBuilder += new CustomQueryBuilderEventHandler(DesignerSettings_CustomQueryBuilder);
+
+private void DesignerSettings_CustomQueryBuilder(object sender, CustomQueryBuilderEventArgs e)
+{
+  using (ActiveQBForm form = new ActiveQBForm())
+  {
+    form.Connection = e.Connection;
+    form.SQL = e.SQL;
+    if (form.ShowDialog() == DialogResult.OK)
+      e.SQL = form.SQL;
+  }
+}

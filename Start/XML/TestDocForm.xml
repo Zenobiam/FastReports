@@ -1,0 +1,64 @@
+<DocumentForm>
+	<Info>
+		<Name>Виды ядерных сил</Name>
+		<ShortName>Виды ядерных сил</ShortName>
+		<Description>Виды ядерных сил</Description>
+		<Uid>9147a569-28aa-40e5-b453-32a3adcb4633</Uid>
+	</Info>
+	<Params>
+		<ColumnCount>12</ColumnCount>
+		<RowsCount>25</RowsCount>
+		<Orientation>horizontal</Orientation>
+	</Params>
+	<Structure>
+		<Block X="6" Y="0" Width="6" Height="2" ContentType="fill">
+			<Text>Начальнику штаба</Text>
+			<Value></Value>
+		</Block>
+		<Block X="6" Y="2" Width="6" Height="1" ContentType="text">
+			<Text></Text>
+		</Block>
+		<Block X="0" Y="3" Width="12" Height="2" ContentType="text">
+			<Text>Виды ядерных сил</Text>
+		</Block>
+		<Block X="0" Y="5" Width="12" Height="10" ContentType="table">
+			<Structure>
+				<Column Title="Вид ядерной силы" Name="stnuc_id" ColSpan = 3/>
+				<Column Title="Код ядерной силы" Name="stnuc_code" ColSpan = 1/>
+				<Column Title="Наименование" Name="stnuc_short_name" ColSpan = 1/>
+				<Column Title="Служебное поле" Name="stnuc_techno" ColSpan = 1/>
+				<Column Title="test поле" Name="test" ColSpan = 1/>
+			</Structure>
+			<Data>
+				<Row>
+					<stnuc_code>1</stnuc_code>
+					<stnuc_id>1</stnuc_id>
+					<stnuc_short_name>РВСН</stnuc_short_name>
+					<stnuc_techno></stnuc_techno>
+          <test></test>
+				</Row>
+				<Row>
+					<stnuc_code>2</stnuc_code>
+					<stnuc_id>2</stnuc_id>
+					<stnuc_short_name>ВМФ</stnuc_short_name>
+					<stnuc_techno></stnuc_techno>
+          <test></test>
+				</Row>
+				<Row>
+					<stnuc_code>3</stnuc_code>
+					<stnuc_id>3</stnuc_id>
+					<stnuc_short_name>ВВС</stnuc_short_name>
+					<stnuc_techno></stnuc_techno>
+          <test></test>
+				</Row>
+				<Row>
+					<stnuc_code>4</stnuc_code>
+					<stnuc_id>4</stnuc_id>
+					<stnuc_short_name>СВ</stnuc_short_name>
+					<stnuc_techno></stnuc_techno>
+          <test></test>
+				</Row>
+			</Data>
+		</Block>
+	</Structure>
+</DocumentForm>

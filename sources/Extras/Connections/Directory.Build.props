@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Choose>
+    <When Condition="Exists('$(MSBuildThisFileDirectory)..\..\FastReport.dll') Or Exists('$(MSBuildThisFileDirectory)..\..\FastReport\bin\Debug\FastReport.dll')">
+      <ItemGroup>
+        <Reference Condition="Exists('$(MSBuildThisFileDirectory)..\..\FastReport.dll')" Include="FastReport">
+          <HintPath>$(MSBuildThisFileDirectory)..\..\FastReport.dll</HintPath>
+        </Reference>
+        <Reference Condition="Exists('$(MSBuildThisFileDirectory)..\..\FastReport\bin\Debug\FastReport.dll')" Include="FastReport">
+          <HintPath>$(MSBuildThisFileDirectory)..\..\FastReport\bin\Debug\FastReport.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Condition="Exists('$(MSBuildThisFileDirectory)..\..\FastReport.Mono.dll')" Include="FastReport.Mono">
+          <HintPath>$(MSBuildThisFileDirectory)..\..\FastReport.Mono.dll</HintPath>
+        </Reference>
+        <Reference Condition="Exists('$(MSBuildThisFileDirectory)..\..\FastReport.Mono\bin\Debug\FastReport.Mono.dll')" Include="FastReport.Mono">
+          <HintPath>$(MSBuildThisFileDirectory)..\..\FastReport.Mono\bin\Debug\FastReport.Mono.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+</Project>

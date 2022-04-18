@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{9947FBDA-F86E-49FE-94BF-5065512264AC}") = "FastReport.GoogleBigQuery", "FastReport.GoogleBigQuery.csproj", "{14362FB0-7810-491C-A28F-8D6AF660CD90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14362FB0-7810-491C-A28F-8D6AF660CD90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14362FB0-7810-491C-A28F-8D6AF660CD90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14362FB0-7810-491C-A28F-8D6AF660CD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14362FB0-7810-491C-A28F-8D6AF660CD90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

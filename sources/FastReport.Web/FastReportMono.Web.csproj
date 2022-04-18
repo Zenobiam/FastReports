@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29A4C63B-8704-4A37-B3B5-B0871727C9C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FastReport.Web</RootNamespace>
+    <AssemblyName>FastReport.Web</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\FastReport.Net.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DOTNET_4;DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\FastReport.Web.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DOTNET_4;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\FastReport.Web.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Demo|AnyCPU' ">
+    <OutputPath>bin\Demo\</OutputPath>
+    <DefineConstants>DOTNET_4;TRACE;Demo</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\Demo\FastReport.Web.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Academic|AnyCPU' ">
+    <OutputPath>bin\Academic\</OutputPath>
+    <DefineConstants>DOTNET_4;TRACE;Academic</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\Academic\FastReport.Web.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'WinForms|AnyCPU' ">
+    <OutputPath>bin\WinForms\</OutputPath>
+    <DefineConstants>DOTNET_4;TRACE;WinForms</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\WinForms\FastReport.Web.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Community|AnyCPU'">
+    <OutputPath>bin\Community\</OutputPath>
+    <DefineConstants>DOTNET_4;TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\FastReport.Web.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\FastReport.Web.Base\ScriptSecurity.cs" />
+    <Compile Include="WebButton.cs" />
+    <Compile Include="WebCache.cs" />
+    <Compile Include="WebCheckBox.cs" />
+    <Compile Include="WebComboBox.cs" />
+    <Compile Include="WebGroupBox.cs" />
+    <Compile Include="WebListBox.cs" />
+    <Compile Include="WebCheckedListBox.cs" />
+    <Compile Include="WebDesign.cs" />
+    <Compile Include="WebExport.cs" />
+    <Compile Include="WebHandlers.cs" />
+    <Compile Include="WebExportItem.cs" />
+    <Compile Include="WebLabel.cs" />
+    <Compile Include="WebLog.cs" />
+    <Compile Include="WebRadioButton.cs" />
+    <Compile Include="WebReport.cs" />
+    <Compile Include="WebReportDesigner.cs" />
+    <Compile Include="WebReportDialogs.cs" />
+    <Compile Include="WebReportHtml.cs" />
+    <Compile Include="WebReportTabs.cs" />
+    <Compile Include="WebReportProperties.cs" />
+    <Compile Include="WebReportStyles.cs" />
+    <Compile Include="WebResources.cs" />
+    <Compile Include="WebTemplates.cs" />
+    <Compile Include="WebTextBox.cs" />
+    <Compile Include="WebDateTimePicker.cs" />
+    <Compile Include="WebMonthCalendar.cs" />
+    <Compile Include="WebToolbar.cs" />
+    <Compile Include="WebUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Report.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\Progress.gif" />
+    <EmbeddedResource Include="Resources\Images\toolbar_background_dark.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_background_dark_32.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_background_light.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_background_light_32.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_background_medium.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_background_medium_32.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_black.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_black_32.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_blue.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_blue_32.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_disabled.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_disabled_32.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_green.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_green_32.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_red.png" />
+    <EmbeddedResource Include="Resources\Images\toolbar_red_32.png" />
+    <EmbeddedResource Include="Resources\Templates\styles.css" />
+    <EmbeddedResource Include="Resources\Templates\toolbar.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Templates\fr_util.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\Checkbox.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Templates\styles_big.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\jquery\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-bg_flat_10_000000_40x100.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-icons_222222_256x240.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-icons_228ef1_256x240.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-icons_ef8c08_256x240.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-icons_ffd27a_256x240.png" />
+    <EmbeddedResource Include="Resources\jquery\images\ui-icons_ffffff_256x240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\jquery\jquery-ui.custom.min.js" />
+    <EmbeddedResource Include="Resources\jquery\jquery-ui.min.css" />
+    <EmbeddedResource Include="Resources\jquery\jquery.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\split\split.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\jstree\jstree.min.js" />
+    <EmbeddedResource Include="Resources\jstree\style.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\jstree\32px.png" />
+    <EmbeddedResource Include="Resources\jstree\40px.png" />
+    <EmbeddedResource Include="Resources\jstree\throbber.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Templates\textedit_form.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FastReport.Mono\FastReport.Mono.csproj">
+      <Project>{7c64fbdc-25e5-47ff-b6f8-443256745e2d}</Project>
+      <Name>FastReport.Mono</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

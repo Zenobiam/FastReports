@@ -1,0 +1,120 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "..\WebSite\WebSite.csproj", "{FA70CC4D-2E12-4850-A61B-F0C96BD39969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastReportMono.Web", "..\..\..\..\FastReport.Web\FastReportMono.Web.csproj", "{29A4C63B-8704-4A37-B3B5-B0871727C9C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastReport.Mono", "..\..\..\..\FastReport.Mono\FastReport.Mono.csproj", "{7C64FBDC-25E5-47FF-B6F8-443256745E2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Academic|.NET = Academic|.NET
+		Academic|Any CPU = Academic|Any CPU
+		Basic|.NET = Basic|.NET
+		Basic|Any CPU = Basic|Any CPU
+		Community|.NET = Community|.NET
+		Community|Any CPU = Community|Any CPU
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Demo|.NET = Demo|.NET
+		Demo|Any CPU = Demo|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		WinForms|.NET = WinForms|.NET
+		WinForms|Any CPU = WinForms|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Academic|.NET.ActiveCfg = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Academic|.NET.Build.0 = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Academic|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Academic|Any CPU.Build.0 = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Basic|.NET.ActiveCfg = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Basic|.NET.Build.0 = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Basic|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Basic|Any CPU.Build.0 = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Community|.NET.ActiveCfg = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Community|.NET.Build.0 = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Community|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Community|Any CPU.Build.0 = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Debug|.NET.Build.0 = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Demo|.NET.ActiveCfg = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Demo|.NET.Build.0 = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Demo|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Demo|Any CPU.Build.0 = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Release|.NET.ActiveCfg = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Release|.NET.Build.0 = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.WinForms|.NET.ActiveCfg = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.WinForms|.NET.Build.0 = Release|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.WinForms|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA70CC4D-2E12-4850-A61B-F0C96BD39969}.WinForms|Any CPU.Build.0 = Debug|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Academic|.NET.ActiveCfg = Academic|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Academic|.NET.Build.0 = Academic|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Academic|Any CPU.ActiveCfg = Academic|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Academic|Any CPU.Build.0 = Academic|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Basic|.NET.ActiveCfg = WinForms|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Basic|.NET.Build.0 = WinForms|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Basic|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Basic|Any CPU.Build.0 = Debug|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Community|.NET.ActiveCfg = Community|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Community|.NET.Build.0 = Community|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Community|Any CPU.ActiveCfg = Community|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Community|Any CPU.Build.0 = Community|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Debug|.NET.Build.0 = Debug|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Demo|.NET.ActiveCfg = Demo|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Demo|.NET.Build.0 = Demo|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Demo|Any CPU.ActiveCfg = Demo|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Demo|Any CPU.Build.0 = Demo|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Release|.NET.ActiveCfg = Release|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Release|.NET.Build.0 = Release|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.WinForms|.NET.ActiveCfg = WinForms|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.WinForms|.NET.Build.0 = WinForms|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.WinForms|Any CPU.ActiveCfg = WinForms|Any CPU
+		{29A4C63B-8704-4A37-B3B5-B0871727C9C5}.WinForms|Any CPU.Build.0 = WinForms|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Academic|.NET.ActiveCfg = WinForms|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Academic|.NET.Build.0 = WinForms|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Academic|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Academic|Any CPU.Build.0 = Debug|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Basic|.NET.ActiveCfg = Basic|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Basic|.NET.Build.0 = Basic|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Basic|Any CPU.ActiveCfg = Basic|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Basic|Any CPU.Build.0 = Basic|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Community|.NET.ActiveCfg = WinForms|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Community|.NET.Build.0 = WinForms|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Community|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Community|Any CPU.Build.0 = Debug|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Debug|.NET.Build.0 = Debug|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Demo|.NET.ActiveCfg = Demo|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Demo|.NET.Build.0 = Demo|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Demo|Any CPU.ActiveCfg = Demo|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Demo|Any CPU.Build.0 = Demo|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Release|.NET.ActiveCfg = Release|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Release|.NET.Build.0 = Release|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.WinForms|.NET.ActiveCfg = WinForms|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.WinForms|.NET.Build.0 = WinForms|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.WinForms|Any CPU.ActiveCfg = WinForms|Any CPU
+		{7C64FBDC-25E5-47FF-B6F8-443256745E2D}.WinForms|Any CPU.Build.0 = WinForms|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {382370B0-D9B8-49EB-87CB-4A981F8A9F70}
+	EndGlobalSection
+EndGlobal
