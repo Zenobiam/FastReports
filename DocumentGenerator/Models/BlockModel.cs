@@ -120,7 +120,7 @@ namespace DocumentGenerator.Models
 
         public float SetRowHeight()
         {
-            float rowHeight = 20;
+            float rowHeight = 25;
 
             if (_rowHeight != "" && _rowHeight != null)
             {

@@ -20,7 +20,7 @@ namespace Start
 
             MemoryStream stream = new MemoryStream();
             
-            gen.GetReport(document, "doc", @"D:\MonoDocumentGenerator\TestFastReports\Start\saves\testTableReport");
+            gen.GetReport(document, "pdf", @"D:\MonoDocumentGenerator\TestFastReports\Start\saves\testTableReport");
             //gen.GetReportToStream(document, stream);
 
             Console.WriteLine(stream.Length);

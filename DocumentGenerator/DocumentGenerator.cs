@@ -457,10 +457,10 @@ namespace DocumentGenerator
                            // table[j, i + 1].Text = GetTableContent(xRoot, j, i, "Structure//Block//Data//Row"); // TODO
                             table[j, i + 1].Text = GetXTableContent(model.modelStruct, "Data", "Row", i, j);
                             table[j, i + 1].Border.Lines = BorderLines.All;
-                            //table[i, 0].Fill = new SolidFill(model.SetBackColor());
-                            //table[i, 0].TextColor = model.SetForeColor();
-                            //table[i, 0].HorzAlign = model.SetAlign();
-                            //table[i, 0].Font = model.SetFontStyle();
+                            table[j, i + 1].Fill = new SolidFill(model.SetBackColor());
+                            table[j, i + 1].TextColor = model.SetForeColor();
+                            table[j, i + 1].HorzAlign = model.SetAlign();
+                            table[j, i + 1].Font = model.SetFontStyle();
                         }
                     }
                 }
