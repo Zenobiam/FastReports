@@ -99,6 +99,10 @@ namespace DocumentGenerator
                     else
                         testPage.Landscape = false;
 
+                //testPage.PaperHeight = Units.Millimeters * 10; // можно задать высоту в миллиметрах
+
+               
+
                     #endregion
            
                 #region Data
@@ -162,7 +166,19 @@ namespace DocumentGenerator
                 //testReport.SavePrepared(path + "testTableReport.frx");
                 //testReport.Save("testTableReport.frx");
                 //testReport.Save(Stream)
-                                
+
+
+                // Расчет высоты страницы
+                if (setExport == "png" || setExport == "bmp" || setExport == "jpeg")
+                {
+                    // paper height = 297; pixels = 1122.66
+                    Debug.WriteLine($"dataHeight: {dataMain.CalcHeight()} ");
+                    Debug.WriteLine($"PageHeight: { testPage.PaperHeight} ");
+
+                    float k = testPage.HeightInPixels / testPage.PaperHeight;
+                    testPage.PaperHeight = (dataMain.CalcHeight() / k) + 20f;
+                    Debug.WriteLine($"NEW PageHeight: { testPage.PaperHeight} ");
+                }                
 
                 if (reportStream != null)
                     SaveReportStream(testReport, setExport, reportStream);
