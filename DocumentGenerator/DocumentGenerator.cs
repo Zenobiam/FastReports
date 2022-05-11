@@ -304,14 +304,20 @@ namespace DocumentGenerator
                         break;
                     case "png":
                         var exportPNG = new ImageExport();
+                        exportPNG.Resolution = 300;
+                        exportPNG.ImageFormat = ImageExportFormat.Png;
                         exportPNG.Export(testReport, $@"{_savePath}.png");
                         break;
                     case "jpeg":
                         var exportJPEG = new ImageExport();
+                        exportJPEG.Resolution = 300;
+                        exportJPEG.ImageFormat = ImageExportFormat.Jpeg;
                         exportJPEG.Export(testReport, $@"{_savePath}.jpeg");
                         break;
                     case "bmp":
                         var exportBMP = new ImageExport();
+                        exportBMP.Resolution = 300;
+                        exportBMP.ImageFormat = ImageExportFormat.Bmp;
                         exportBMP.Export(testReport, $@"{_savePath}.bmp");
                         break;
                     default:
