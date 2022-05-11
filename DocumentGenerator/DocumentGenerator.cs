@@ -23,9 +23,15 @@ namespace DocumentGenerator
 
     /// <summary>
     /// Создать объект типа DocumentGenerator
-    /// Вызвать функцию GetReport(XmlDocument _document) с параметром типа XmlDocument 
-    /// Появиться предсмотр отчета(удалено)
+    /// Вызвать функцию GetReport(XDocument _document) с параметром типа XDocument 
     /// Docx/pdf/xlsx файл отчета находиться в папке Debug запускаемого проекта
+    /// 
+    /// 
+    /// TODO
+    /// прозрачность если BMP
+    /// Повысить разрешение картинки
+    /// DataBand привязка к странице (StartNewPage)
+    /// Создание элементов отчет заменить void-->return BlockType и привязывать к бендам
     /// </summary>
 
 
@@ -95,7 +101,7 @@ namespace DocumentGenerator
                     /// A5 14,8 × 21,0 cм
 
                     if (GetNodeValue(xRoot, "Params//Orientation").ToLower() == "horizontal") // PaperWidth (k) -> 1см = 3.78f
-                        testPage.Landscape = true;// Ориентация страницы true - альбомная
+                        testPage.Landscape = true; // Ориентация страницы true - альбомная
                     else
                         testPage.Landscape = false;
 
@@ -113,6 +119,7 @@ namespace DocumentGenerator
                     dataMain.CanGrow = true;
                     dataMain.CanShrink = true;
                     //dataMain.Border = border;
+
                     #endregion
                            
                 try
@@ -146,6 +153,7 @@ namespace DocumentGenerator
                                 break;
                             case "table":
                                 CreateTable(model, dataMain);
+                                //CreateTable(dataMain, xdoc);
                                 break;
                             case "image":
                                 CreatePicture(model, dataMain);
@@ -167,7 +175,22 @@ namespace DocumentGenerator
                 //testReport.Save("testTableReport.frx");
                 //testReport.Save(Stream)
 
-
+                // Расчет ширины страницы
+                /// TODO 
+                /// Расчитывать от количества колонок?
+                /// dataMain не имеет свойства текущей Width (выдает 0)
+               
+                // if (setExport == "png" || setExport == "bmp" || setExport == "jpeg")
+               // {
+               //     // paper height = 297; pixels = 1122.66
+               //     Debug.WriteLine($"dataWidth: {testPage.Width} ");
+               //     Debug.WriteLine($"PageWidth: { testPage.PaperWidth} ");
+               //
+               //     float k = testPage.WidthInPixels / testPage.PaperWidth;
+               //     testPage.PaperWidth = (testPage.Width / k) + 20f;
+               //     Debug.WriteLine($"NEW PageWidth: { testPage.PaperWidth} ");
+               // }
+               //testPage.page
                 // Расчет высоты страницы
                 if (setExport == "png" || setExport == "bmp" || setExport == "jpeg")
                 {
@@ -204,12 +227,15 @@ namespace DocumentGenerator
 
         private IEnumerable<BlockModel> GetModel(XDocument xdoc, XmlElement xRoot)
         {
-            // Количество столбцов на странице отчета
-            float pageColumnsCount = float.Parse(xRoot.SelectSingleNode("Params//ColumnCount").InnerText);
-            // Количество строк на странице отчета
-            float pageRowsCount = float.Parse(xRoot.SelectSingleNode("Params//RowsCount").InnerText);
 
-            string fontFamily = xRoot.SelectSingleNode("Params//FontFamily").InnerText;
+            /// TODO проверки на null и тд
+
+            // Количество столбцов на странице отчета
+            float pageColumnsCount = float.Parse(xRoot.SelectSingleNode("Params//ColumnCount")?.InnerText);
+            // Количество строк на странице отчета
+            float pageRowsCount = float.Parse(xRoot.SelectSingleNode("Params//RowsCount")?.InnerText);
+
+            string fontFamily = xRoot.SelectSingleNode("Params//FontFamily")?.InnerText;
 
 
             /// Удалить после добавления в xml картинки
@@ -352,6 +378,52 @@ namespace DocumentGenerator
 
         float previoustableY = 0;
 
+        private void CreateTable(BandBase _parent, XDocument xRoot)
+        {
+            DataSet ds = new DataSet();
+
+            //foreach (XElement element in xDoc.Element("DocumentForm").Element("Structure").Elements("Block"))
+            //{
+            //    XAttribute attribute = element.Attribute("table");
+            //
+            //    
+            //}
+            //var items = from xe in xDoc.Element("DocumentForm").Element("Structure").Elements("Block")
+            //            where xe.Attribute("ContentType").Value == "table"
+            //            select new BlockModel
+            //            {
+            //                element = xe.Elements()
+            //            };
+            //
+            //var nodes = from node in items
+            //            where node.element.Any()
+            //
+            ////using (XmlReader reader = new XmlNodeReader(content))
+            ////{
+            ////    // ...
+            ////}
+            ////
+            //DataSet ds = new DataSet();
+            ////ds.ReadXml(xRoot);
+            ///
+
+           //var items = from xe in xRoot.Element("DocumentForm").Element("Structure").Elements("Block")
+           //            where xe.Attribute("ContentType").Value == "table"
+           //            select new XDocument
+           //            {
+           //
+           //            }
+           //
+           //foreach (XElement item in xRoot.Element("DocumentForm").Element("Structure").Elements("Block")
+           //{
+           //   
+           //
+           //    var xEl = 
+           //}
+
+
+        }
+
         private void CreateTable(BlockModel model, BandBase _parent)
         {
             if (model != null && _parent != null)
@@ -362,6 +434,10 @@ namespace DocumentGenerator
                     if (previoustableY == float.Parse(model.PointY))
                     {
                         currentTableY = float.Parse(model.PointY) + 1;
+                    }
+                    if (previoustableY != 0)
+                    {
+                        _parent.StartNewPage = true;
                     }
 
                     TableObject table = new TableObject
@@ -375,9 +451,17 @@ namespace DocumentGenerator
                         RowCount = (GetXNodeValue(model.modelStruct, "Data", "Row") + 1),
                         ColumnCount = GetXNodeValue(model.modelStruct, "Structure", "Column"),
                         RepeatHeaders = true,
+                        //RepeatColumnHeaders = true,
+                        //RepeatRowHeaders = true,
+                        FixedRows = 1,
+                       //CanGrow = true,
+                       //CanShrink = true
                     };
                     table.CreateUniqueName();
-
+                   //table.RepeatColumnHeaders = true;
+                   //table.RepeatHeaders = true;
+                   //table.RepeatRowHeaders = true;
+                   //table.FixedRows = 1;
                     previoustableY = float.Parse(model.PointY) + float.Parse(model._Height);
 
 
@@ -431,8 +515,8 @@ namespace DocumentGenerator
                         //row.Height = Units.Centimeters * ((model.pageHeight / model._pageRowsCount) * (float.Parse(model._Height) / table.RowCount)); // 2f отступ сбоку; 3 как коэффициент
                         row.Height = model.SetRowHeight();
                     }
-
-
+                   
+                   
                     // Пересчет высоты таблицы после установления высоты одной строки
                     table.Bounds = new RectangleF(
                             Units.Centimeters * (float.Parse(model.PointX) * (model.pageWidth / model._pageColumnsCount)), // 12 -> page columns count
@@ -441,7 +525,7 @@ namespace DocumentGenerator
                             //Units.Centimeters * float.Parse(model._Height) * (model.pageHeight / model._pageRowsCount)),
                             Units.Centimeters * (table.RowCount + model.SetRowHeight())   // * (model.pageHeight / model._pageRowsCount) )
                         );
-
+                   
                     // Строка с названиями столбцов
                     for (int i = 0; i < (table.ColumnCount) ; i++)
                     {
@@ -450,19 +534,19 @@ namespace DocumentGenerator
                         table[i, 0].Fill = new SolidFill(model.SetBackColor());
                         table[i, 0].TextColor = model.SetForeColor();
                         table[i, 0].HorzAlign = model.SetAlign();
-                        table[i, 0].Font = model.SetFontStyle();
+                        table[i, 0].Font = model.SetFontStyle();                        
                     }
-
+                   
                     //table[0, 0].ColSpan = 2;  // Задает количество ячеек в столбце в xml указать 
                     //ColSpan для ячеек <Column Title="Вид ядерной силы" Name="stnuc_id" ColSpan = ../>
-
+                   
                     // Задает количество ячеек в столбце
                     for (int i = 0; i < table.ColumnCount; i++)
                     {
                         table[i, 0].ColSpan = int.Parse(GetXNodeAttrValue(model.modelStruct, "Structure", "Column", "ColSpan", i)); 
                         table[i, 0].Border.Lines = BorderLines.All;
                     }
-
+                   
                     // Содержание таблицы
                     for (int i = 0; i < table.RowCount - 1; i++) // Rows
                     {
@@ -479,7 +563,9 @@ namespace DocumentGenerator
                             table[j, i + 1].Font = model.SetFontStyle();
                         }
                     }
+                    //table.FixedRows = 1;
                 }
+                
                 catch (Exception e)
                 {
                     Debug.WriteLine("DocumentGenerator.CreateTableObject: Не удалось создать таблицу");

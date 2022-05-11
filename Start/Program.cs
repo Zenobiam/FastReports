@@ -16,11 +16,11 @@ namespace Start
 
             var document = new XmlDocument();
             string path = Path.Combine(Environment.CurrentDirectory);
-            document.Load(path + "/testDF1.xml");
+            document.Load(path + "/test_doc_form.xml");
 
             MemoryStream stream = new MemoryStream();
             
-            gen.GetReport(document, "png", @"D:\MonoDocumentGenerator\TestFastReports\Start\saves\testTableReport");
+            gen.GetReport(document, "pdf", @"D:\MonoDocumentGenerator\TestFastReports\Start\saves\testTableReport2");
             //gen.GetReportToStream(document, stream);
 
             Console.WriteLine(stream.Length);
