@@ -117,9 +117,9 @@ namespace DocumentGenerator
                     dataMain.CreateUniqueName();
 
                     dataMain.CanGrow = true;
-                    //dataMain.CanShrink = true;
-                //dataMain.Border = border;
-                
+                    dataMain.CanShrink = true;
+                    //dataMain.Border = border;
+
                     #endregion
                            
                 try
@@ -163,13 +163,12 @@ namespace DocumentGenerator
                                 break;
                         }
                     }
-                    
                 }
                 catch (Exception e)
                 {
                     Debugger.Log(2, e.StackTrace, e.Message);
                 }
-                
+
 
                 // Сохранение файлов отчета
                 //testReport.SavePrepared(path + "testTableReport.frx");
@@ -180,18 +179,18 @@ namespace DocumentGenerator
                 /// TODO 
                 /// Расчитывать от количества колонок?
                 /// dataMain не имеет свойства текущей Width (выдает 0)
-
+               
                 // if (setExport == "png" || setExport == "bmp" || setExport == "jpeg")
-                // {
-                //     // paper height = 297; pixels = 1122.66
-                //     Debug.WriteLine($"dataWidth: {testPage.Width} ");
-                //     Debug.WriteLine($"PageWidth: { testPage.PaperWidth} ");
-                //
-                //     float k = testPage.WidthInPixels / testPage.PaperWidth;
-                //     testPage.PaperWidth = (testPage.Width / k) + 20f;
-                //     Debug.WriteLine($"NEW PageWidth: { testPage.PaperWidth} ");
-                // }
-                //testPage.page
+               // {
+               //     // paper height = 297; pixels = 1122.66
+               //     Debug.WriteLine($"dataWidth: {testPage.Width} ");
+               //     Debug.WriteLine($"PageWidth: { testPage.PaperWidth} ");
+               //
+               //     float k = testPage.WidthInPixels / testPage.PaperWidth;
+               //     testPage.PaperWidth = (testPage.Width / k) + 20f;
+               //     Debug.WriteLine($"NEW PageWidth: { testPage.PaperWidth} ");
+               // }
+               //testPage.page
                 // Расчет высоты страницы
                 if (setExport == "png" || setExport == "bmp" || setExport == "jpeg")
                 {
@@ -455,7 +454,6 @@ namespace DocumentGenerator
                         //RepeatColumnHeaders = true,
                         //RepeatRowHeaders = true,
                         FixedRows = 1,
-                        
                        //CanGrow = true,
                        //CanShrink = true
                     };
@@ -511,14 +509,11 @@ namespace DocumentGenerator
                         //column.Width = (Units.Centimeters * (float.Parse(model._Width) / table.ColumnCount)); //(((model.pageWidth - 2f) / table.ColumnCount))); // 2f отступ сбоку
                         // column.Width = (Units.Centimeters * (model.pageWidth / table.ColumnCount) );
                         column.Width = table.Width / table.ColumnCount;
-                        //column.AutoSize = true;
-                        column.MaxWidth = table.Width / table.ColumnCount;
                     }
                     foreach (TableRow row in table.Rows) // Устанавливает высоту строки // указать в xml
                     {
                         //row.Height = Units.Centimeters * ((model.pageHeight / model._pageRowsCount) * (float.Parse(model._Height) / table.RowCount)); // 2f отступ сбоку; 3 как коэффициент
-                        //row.Height = model.SetRowHeight();
-                        row.AutoSize = true;
+                        row.Height = model.SetRowHeight();
                     }
                    
                    
@@ -539,9 +534,7 @@ namespace DocumentGenerator
                         table[i, 0].Fill = new SolidFill(model.SetBackColor());
                         table[i, 0].TextColor = model.SetForeColor();
                         table[i, 0].HorzAlign = model.SetAlign();
-                        table[i, 0].Font = model.SetFontStyle();
-                        
-                       // table[i, 0].ParagraphFormat = LineSpacingType.Single;
+                        table[i, 0].Font = model.SetFontStyle();                        
                     }
                    
                     //table[0, 0].ColSpan = 2;  // Задает количество ячеек в столбце в xml указать 
