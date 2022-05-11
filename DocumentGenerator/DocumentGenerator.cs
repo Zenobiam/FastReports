@@ -329,7 +329,7 @@ namespace DocumentGenerator
 
         #region Создание объектов отчета
         // Объект со значением для вставки
-        private void CreateFillObject(BlockModel model, BandBase _parent)
+        private TextObject CreateFillObject(BlockModel model, BandBase _parent)
         {
             if (model != null && _parent != null)
             {
@@ -341,7 +341,7 @@ namespace DocumentGenerator
                         Units.Centimeters * ((float.Parse(model.PointY)) * (model.pageHeight / model._pageRowsCount)),
                         Units.Centimeters * ((float.Parse(model._Width) * (model.pageWidth / model._pageColumnsCount)) - 2f),
                         Units.Centimeters * (float.Parse(model._Height) * (model.pageHeight / model._pageRowsCount))),
-                    Parent = _parent,
+                    //Parent = _parent,
                     HtmlTags = model._Value == "" ? false : true,
                     Text = (model._Value == "" || model._Value == "undefined") ? $"{model._Text} {underline}" : $"{model._Text} <u>{model._Value}</u>", // TODO undefined
                     Trimming = StringTrimming.Word, // переносит текст на новую строку по ближайшему слову    
@@ -351,10 +351,17 @@ namespace DocumentGenerator
                     Font = model.SetFontStyle(),
                 };
                 text.CreateUniqueName();
+                return text;
+            }
+            else
+            {
+                Debug.WriteLine("DocumentGenerator.CreateFillObject: модель пуста");
+                TextObject empty = new TextObject();
+                return empty;
             }
         }
         // Текстовый объект
-        private void CreateTextObject(BlockModel model, BandBase _parent)
+        private TextObject CreateTextObject(BlockModel model, BandBase _parent)
         {
             if (model != null && _parent != null)
             {
@@ -365,13 +372,20 @@ namespace DocumentGenerator
                         Units.Centimeters * ((float.Parse(model.PointY)) * (model.pageHeight / model._pageRowsCount)),
                         Units.Centimeters * ((float.Parse(model._Width) * (model.pageWidth / model._pageColumnsCount)) - 2f),
                         Units.Centimeters * (float.Parse(model._Height)) * (model.pageHeight / model._pageRowsCount)),
-                    Parent = _parent,
+                    //Parent = _parent,
                     Text = model._Text,
                     Fill = new SolidFill(model.SetBackColor()),
                     TextColor = model.SetForeColor(),
                     HorzAlign = model.SetAlign(),
                     Font = model.SetFontStyle(),
                 };
+                return text;
+            }
+            else
+            {
+                Debug.WriteLine("DocumentGenerator.CreateTextObject: модель пуста");
+                TextObject empty = new TextObject();
+                return empty;
             }
         }
         // объект таблицы
@@ -424,7 +438,7 @@ namespace DocumentGenerator
 
         }
 
-        private void CreateTable(BlockModel model, BandBase _parent)
+        private TableObject CreateTable(BlockModel model, BandBase _parent)
         {
             if (model != null && _parent != null)
             {
@@ -564,17 +578,26 @@ namespace DocumentGenerator
                         }
                     }
                     //table.FixedRows = 1;
+                    return table;
                 }
                 
                 catch (Exception e)
                 {
                     Debug.WriteLine("DocumentGenerator.CreateTableObject: Не удалось создать таблицу");
-                    Debugger.Log(2, e.StackTrace, e.Message);                                       
+                    Debugger.Log(2, e.StackTrace, e.Message);
+                    TableObject empty = new TableObject();
+                    return empty;
                 }
+            }
+            else
+            {
+                Debug.WriteLine("DocumentGenerator.CreateTableObject: модель пуста");
+                TableObject empty = new TableObject();
+                return empty;
             }
         }
 
-        private void CreatePicture(BlockModel model, BandBase _parent)
+        private PictureObject CreatePicture(BlockModel model, BandBase _parent)
         {
             PictureObject picture = new PictureObject
             {
@@ -588,6 +611,7 @@ namespace DocumentGenerator
                 Image = GetImage(model._srcImage), 
             };
             picture.CreateUniqueName();
+            return picture;
         }
 
         private Image GetImage(string byteImage)
