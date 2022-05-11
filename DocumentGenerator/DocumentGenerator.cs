@@ -514,6 +514,7 @@ namespace DocumentGenerator
                     {
                         //row.Height = Units.Centimeters * ((model.pageHeight / model._pageRowsCount) * (float.Parse(model._Height) / table.RowCount)); // 2f отступ сбоку; 3 как коэффициент
                         row.Height = model.SetRowHeight();
+                        row.AutoSize = true;
                     }
                    
                    
