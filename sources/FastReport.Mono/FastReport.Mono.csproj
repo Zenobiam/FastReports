@@ -99,10 +99,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FastReport.Compat, Version=2021.2.0.0, Culture=neutral, PublicKeyToken=406e1f4c3c8ef97e, processorArchitecture=MSIL">
-      <HintPath>..\packages\FastReport.Compat.2021.2.0\lib\net40\FastReport.Compat.dll</HintPath>
+      <HintPath>..\FastReport.Compat.dll</HintPath>
     </Reference>
     <Reference Include="FastReport.DataVisualization, Version=2021.2.0.0, Culture=neutral, PublicKeyToken=5ceb240df42bf6e8, processorArchitecture=MSIL">
-      <HintPath>..\packages\FastReport.DataVisualization.2021.2.0\lib\net40\FastReport.DataVisualization.dll</HintPath>
+      <HintPath>..\FastReport.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
