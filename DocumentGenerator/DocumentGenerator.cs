@@ -307,6 +307,10 @@ namespace DocumentGenerator
                         exportPNG.Resolution = 300;
                         exportPNG.ImageFormat = ImageExportFormat.Png;
                         exportPNG.Export(testReport, $@"{_savePath}.png");
+
+                        // Transparent
+                        //testReport.Save($"{_savePath}.frx");
+                        //CreateTransparent($"{_savePath}.frx");
                         break;
                     case "jpeg":
                         var exportJPEG = new ImageExport();
@@ -332,6 +336,35 @@ namespace DocumentGenerator
                 Debugger.Log(2, e.StackTrace, e.Message);
             }
         }
+
+       // public void CreateTransparent(string _reportPath)
+       // {
+       //     Report report = new Report();
+       //
+       //     //report.Load("D:/MonoDocumentGenerator/TestFastReports/Start/saves/testTableReport2.frx");
+       //     ReportPage page = new ReportPage();
+       //     report.Pages.Add(page);
+       //     page.CreateUniqueName();
+       //
+       //     DataBand data = new DataBand();
+       //     page.Bands.Add(data);
+       //     data.CreateUniqueName();
+       //     data.Height = Units.Centimeters * 1;
+       //
+       //     PictureObject pic = new PictureObject();
+       //     pic.Bounds = new RectangleF(0, 0, Units.Centimeters * 5, Units.Centimeters * 5); //Set object bounds
+       //     pic.Image = new Bitmap("D:/MonoDocumentGenerator/TestFastReports/Start/saves/testTableReport2.png"); //Set picture
+       //     pic.Parent = data; //Set picture parent object
+       //     pic.CreateUniqueName();
+       //
+       //     PDFExport export = new PDFExport();
+       //
+       //     export.TransparentImages = true;
+       //     report.Prepare();
+       //
+       //     export.Export(report, $"{_savePath}test.pdf");
+       //
+       // }
 
         #region Создание объектов отчета
         // Объект со значением для вставки
