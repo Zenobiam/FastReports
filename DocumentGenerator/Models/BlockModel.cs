@@ -236,6 +236,33 @@ namespace DocumentGenerator.Models
                 return new Font("Times New Roman", 14, FontStyle.Regular);
             }            
         }
+
+        public Font SetHeadersFontStyle()
+        {
+            try
+            {
+                Font font = new Font(_fontName, SetFontSize());
+
+                //if (bool.Parse(_bold))
+                    font = new Font(font, font.Style ^ FontStyle.Bold);
+                if (bool.Parse(_italic))
+                    font = new Font(font, font.Style ^ FontStyle.Italic);
+                if (bool.Parse(_underline))
+                    font = new Font(font, font.Style ^ FontStyle.Underline);
+                if (bool.Parse(_strikeout))
+                    font = new Font(font, font.Style ^ FontStyle.Strikeout);
+                else
+                    font = new Font(font, font.Style ^ FontStyle.Regular);
+
+                return font;
+            }
+            catch (Exception e)
+            {
+                Debugger.Log(2, e.StackTrace, e.Message);
+                Debug.WriteLine("BlockModel.SetFontStyle: Не удалось присвоить значение шрифта, установлен шрифт по умолчанию");
+                return new Font("Times New Roman", 14, FontStyle.Regular);
+            }
+        }
         /// <Style>
         ///      <Font>Рамер шрифта</Font> 0 - default(12), (+)(-) - default "+,-" value
         ///      <Underline>Подчеркнутый текст</Underline> true/false

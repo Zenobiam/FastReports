@@ -534,8 +534,8 @@ namespace DocumentGenerator
                         table[i, 0].Border.Lines = BorderLines.All;
                         table[i, 0].Fill = new SolidFill(model.SetBackColor());
                         table[i, 0].TextColor = model.SetForeColor();
-                        table[i, 0].HorzAlign = model.SetAlign();
-                        table[i, 0].Font = model.SetFontStyle();                        
+                        table[i, 0].HorzAlign = HorzAlign.Center; //model.SetAlign();
+                        table[i, 0].Font = model.SetHeadersFontStyle();                        
                     }
                    
                     //table[0, 0].ColSpan = 2;  // Задает количество ячеек в столбце в xml указать 
